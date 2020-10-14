@@ -1,0 +1,19 @@
+$page-width: 750;
+$page-height: 1205;
+
+// pixels to rems
+@function pxToRem($px) {
+  @return $px / 16 * 1rem;
+}
+
+@function flexWidth($width) {
+  @return calc(#{$width} / #{$page-width} * 100vw);
+}
+
+@function flexHeight($height) {
+  @return calc(#{$height} / #{$page-height} * 100vh);
+}
+
+@function pxToImg ($px) {
+  @return calc( 100vmin / #{$page-width} * #{$px})
+}
